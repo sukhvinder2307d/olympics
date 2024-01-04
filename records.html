@@ -1,0 +1,743 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="./main.css">
+  <!-- Google fonts link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <title>Records made by Olympians</title>
+</head>
+
+<body>
+
+
+  <!-- Navbar start -->
+
+
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="height: 18vh;">
+    <div class="container-fluid">
+      <a class="navbar-brand mt-2 ms-4" href="./index.html"><img style="height: 100px;"
+          src="./Images/WhatsApp_Image_2023-10-19_at_20.56.01_63c60977-removebg-preview.png" alt="nav"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="text-dark"><i class="fa-solid fa-bars"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto me-5 mb-2 mb-lg-0">
+          <li class="nav-item px-4">
+            <a class="nav-link active fs-4 fw-bold text-dark heading hover-underline-animation" aria-current="page"
+              href="./index.html">GAMES</a>
+          </li>
+          <li class="nav-item px-4">
+            <a class="nav-link active fs-4 text-dark fw-bold heading hover-underline-animation"
+              href="./athletes.html">ATHLETES</a>
+          </li>
+          <li class="nav-item px-4">
+            <a class="nav-link active fs-4 text-dark fw-bold heading hover-underline-animation"
+              href="./news.html">NEWS</a>
+          </li>
+          <li class="nav-item px-4">
+            <a class="nav-link active fs-4 fw-bold text-dark heading hover-underline-animation"
+              href="./records.html">RECORDS</a>
+          </li>
+        </ul>
+        <button class="btn btn-outline-dark me-2 rounded-pill" data-bs-toggle="modal" data-bs-target="#exampleModal">Log
+          In</button>
+        <button class="btn btn-outline-dark me-4 rounded-pill" data-bs-toggle="modal"
+          data-bs-target="#exampleModal1">Sign Up</button>
+      </div>
+    </div>
+  </nav>
+  <!-- NAVBAR END -->
+
+  <!-- login modal -->
+
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <img src="./Images/WhatsApp_Image_2023-10-19_at_20.56.01_63c60977-removebg-preview.png" alt=""
+            style="width: 60px;">
+          <h5 class="modal-title heading text-light" id="exampleModalLabel">Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-light">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label heading"><i class="fas fa-user"></i>Email
+                address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required
+                placeholder="Email">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label heading"><i class="fas fa-key"></i>Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" required placeholder="Password">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary heading rounded-pill" data-bs-dismiss="modal">Forgot
+                Password</button>
+              <button type="submit" class="btn btn-primary heading rounded-pill">LogIn</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Signup modal -->
+
+
+  <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content text-light">
+        <div class="modal-header">
+          <h5 class="modal-title heading" id="exampleModalLabel">SignUp</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label heading">Name</label>
+              <input type="text" class="form-control" id="exampleInputPassword1" required placeholder="Name">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label heading">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required
+                placeholder="Email">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label heading">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" required placeholder="Password">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label heading">Confirm Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" required
+                placeholder="Confirm Password">
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary heading rounded-pill">Sign Up</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =====RECORD section Start ======--->
+  <section id="Olympic athletes" class="container mt-5">
+    <h1 class="title text-uppercase olympians ps-2 fw-bold heading">
+      RECORDS MADE BY OLYMPIANS
+    </h1>
+    <div class="row">
+      <!-- Athlete 1 -->
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4 rounded">
+        <div class="card border-0" id="card">
+          <img src="./record imgs/230531095956-01-usain-bolt-file-2016-rio.jpg" class="card-img-top" width="100%"
+            height="250px" alt="Athlete">
+          <div class="card-body">
+            <h5 class="card-title">USAIN BOLT</h5>
+            <p> <b>Usain St. Leo Bolt </b>( born 21 August 1986) is a Jamaican retired sprinter, widely considered to be
+              the greatest sprinter of all time. He is the world record holder in the 100 metres, 200 metres, and 4 x
+              100 metres relay.</p>
+            <a href="#Usain Bolt" class="btn btn-dark" data-bs-target="#Usain" data-bs-toggle="modal">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Athlete 2 -->
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <div class="card border-0" id="card">
+          <img src="./record imgs/download (1).jpeg" class="card-img-top" width="100%" height="250px" alt="Athlete">
+          <div class="card-body">
+            <h5 class="card-title">Yelena Slesarenko</h5>
+            <p> <b>Yelena Vladimirovna Slesarenko </b>, (born February 28, 1982, in Volgograd) is a Russian high jumper.
+            </p>
+            <a href="#Yelena" class="btn btn-dark" data-bs-target="#Yelena" data-bs-toggle="modal">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Athlete 3 -->
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <div class="card border-0" id="card">
+          <img src="./record imgs/Thiago-Braz-at-Rio-2016-.jpg" class="card-img-top" width="100%" height="250px"
+            alt="Athlete">
+          <div class="card-body">
+            <h5 class="card-title">Thiago BRAZ</h5>
+            <p><b>Thiago Braz da Silva</b> (born 16 December 1993) is a Brazilian athlete specializing in the pole vault
+              who
+              holds the Olympic record of 6.03 metres. He won the gold medal at the 2016 Summer Olympics and the bronze
+              medal at the 2020 Summer Olympics.</p>
+            <a href="#Thiago" class="btn btn-dark" data-bs-target="#Thiago" data-bs-toggle="modal">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+  </section>
+
+  <!-- ======modal box start===== -->
+  <div class="modal fade modal-lg" data-bs-backdrop="static" id="Usain" a>
+    <div class="modal-dialog  modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <a class="navbar-brand ms-5 text-sm-break" href="#" id="logo">
+            <img src="./Images/WhatsApp_Image_2023-10-19_at_20.56.01_63c60977-removebg-preview.png" width="70px"
+              height="70px" alt="logo" id="logo-img" />
+
+            <span class="fw-bold text-dark"> |OLYMPICS|</a>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body ms-2">
+          <h1>USAIN BOLT</h1>
+          <p>
+            <b>Usain St. Leo Bolt</b> (born 21 August 1986) is a Jamaican retired sprinter, widely considered to be the
+            greatest sprinter of all time. He is the world record holder in the 100 metres, 200 metres, and 4 x 100
+            metres relay.
+
+            An <b>eight-time</b> Olympic gold medallist, Bolt is the only sprinter to win Olympic 100 m and 200 m titles
+            at three consecutive Olympics (2008, 2012, and 2016). He also won two 4 x 100 relay gold medals. He gained
+            worldwide fame for his double sprint victory in world record times at the 2008 <b>Beijing Olympics </b> ,
+            which made him the first person to hold both records since fully automatic time became mandatory.
+
+            An eleven-time World Champion, he won consecutive World Championship 100 m, 200 m and 4 x 100 metres relay
+            gold medals from 2009 to 2015, with the exception of a 100 m false start in 2011. He is the most successful
+            male athlete of the World Championships. Bolt is the first athlete to win four World Championship titles in
+            the 200 m and is one of the most successful in the 100 m with three titles, being the first person to run
+            sub-9.7s and sub-9.6s.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-dark" data-bs-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ====== modal box End===== -->
+
+  <!-- ======modal box start===== -->
+  <div class="modal fade modal-lg" data-bs-backdrop="static" id="Yelena">
+    <div class="modal-dialog  modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <a class="navbar-brand ms-5 text-sm-break" href="#" id="logo">
+            <img src="./Images/WhatsApp_Image_2023-10-19_at_20.56.01_63c60977-removebg-preview.png" width="70px"
+              height="70px" alt="logo" id="logo-img" />
+            <span class="fw-bold text-dark"> |OLYMPICS|</a>
+
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body ms-2">
+          <h1>Yelena Slesarenko
+          </h1>
+          <p>Yelena Vladimirovna Slesarenko, ( born February 28, 1982, in Volgograd) is a Russian high jumper.
+
+            Largely unknown before 2004, she kick started the season by clearing 2.04 metres and winning the World
+            Indoor Championships. When the outdoor season started she won the SPAR European Cup with the same result,
+            improving her personal best from 1.97 (achieved in 2002). She continued her good form at the 2004 Summer
+            Olympics, winning the gold medal with a new national and personal record of 2.06 metres, beating the
+            previous Olympic record, set by Stefka Kostadinova in 1996. After clearing 2.06 she made decent attempts at
+            2.10, which would have been a world record. She rounded off the season by winning the World Athletics
+            Final.[2]
+
+            Injuries kept her away from most of the 2005 season, including the 2005 World Championships.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-dark" data-bs-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ====== modal box End===== -->
+
+  <!-- ======modal box start===== -->
+
+  <div class="modal fade modal-lg" data-bs-backdrop="static" id="Thiago">
+    <div class="modal-dialog  modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <a class="navbar-brand ms-5 text-sm-break" href="#" id="logo">
+            <img src="./Images/WhatsApp_Image_2023-10-19_at_20.56.01_63c60977-removebg-preview.png" width="70px"
+              height="70px" alt="logo" id="logo-img" />
+            <span class="fw-bold text-dark"> |OLYMPICS|</a>
+
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body ms-2">
+          <h1>Thiago Braz
+          </h1>
+          <p><b> Thiago Braz da Silva </b> (born 16 December 1993) is a Brazilian athlete specializing in the pole vault
+            who
+            holds the Olympic record of 6.03 metres. He won the gold medal at the 2016 Summer Olympics and the bronze
+            medal at the 2020 Summer Olympics.
+
+            </br><strong>CAREER</strong></br>
+            In 2012, he won the gold medal at the World Junior Championships.
+
+            In 2013, he became the South American champion with a new outdoor area record of 5.83 metres. On 24 June
+            2015, he set a new record of 5.92 metres in Baku, Azerbaijan.[1]
+
+            On 13 February 2016, he extended the South American indoor record to 5.93 metres in Berlin, Germany.</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-dark" data-bs-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ====== modal box End===== -->
+  <!-- ====== modal box End===== -->
+  <!-- ====== modal box End===== -->
+  <!-- ====== modal box End===== -->
+  <!-- ====== modal box End===== -->
+  <!-- ====== modal box End===== -->
+  <!-- ====== modal box End===== -->
+
+  <div class="container">
+    <div class="row">
+      <!-- Athlete 1 -->
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4 rounded">
+        <div class="card border-0" id="card">
+          <img
+            src="./record imgs/6.27-jul-96-giochi-olimpici-di-atlanta-atletica-mens-triple-jump-final-kenny-harrison-stati-uniti-g6rgxf-transformed.jpeg"
+            class="card-img-top" width="100%" height="250px" alt="Athlete">
+          <div class="card-body">
+            <h5 class="card-title">Kenny Harrison
+            </h5>
+            <p> <b> Kenny Harrison </b> (born Kerry Harrison, February 13, 1965 in Milwaukee, Wisconsin, United States)
+              is a former track and field athlete competing in triple jump.</p>
+            <a href="#" class="btn btn-dark" data-bs-target="#Kenny" data-bs-toggle="modal">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Athlete 2 -->
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <div class="card border-0" id="card">
+          <img
+            src="./record imgs/https___tf-cmsv2-smithsonianmag-media.s3.amazonaws.com_filer_56_8e_568eeb5e-c924-465f-831d-a0de8cd97641_charles_austin-main.webp"
+            class="card-img-top" width="100%" height="250px" alt="Athlete">
+          <div class="card-body">
+            <h5 class="card-title">Charles Austin</h5>
+            <p>
+              <b>Charles Allen Austin </b> (born December 19, 1967) is an American athlete who won the gold medal in the
+              men's high jump at the 1996 Summer Olympics in Atlanta. He was inducted into the United States Track &
+              Field Hall of Fame in 2012.
+            </p>
+            <a href="#" class="btn btn-dark" data-bs-target="#charles" data-bs-toggle="modal">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Athlete 3 -->
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <div class="card border-0 card-end" id="card">
+          <img src="./record imgs/Rojas_Yulimar-FL-Worlds22-1200x675.jpg" class="card-img-top" width="100%"
+            height="250px" alt="Athlete 3">
+          <div class="card-body">
+            <h5 class="card-title">Yulimar Rojas
+            </h5>
+            <p><b> Yulimar Rojas Rodríguez</b> (also known as Yolimar Rojas; born 21 October 1995) is a Venezuelan
+              athlete who
+              holds the world record for women's triple jump, at 15.74 m (51 ft 7+1⁄2 in). She is the current Olympic
+              champion, a four-time World Champion.</p>
+            <a href="#" class="btn btn-dark" data-bs-target="#yulimar" data-bs-toggle="modal">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <!-- ======modal box start===== -->
+    <div class="modal fade modal-lg" data-bs-backdrop="static" id="Kenny" a>
+      <div class="modal-dialog  modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <a class="navbar-brand ms-5 text-sm-break" href="#" id="logo">
+              <img src="./Images/WhatsApp_Image_2023-10-19_at_20.56.01_63c60977-removebg-preview.png" width="70px"
+                height="70px" alt="logo" id="logo-img" />
+
+              <span class="fw-bold text-dark"> |OLYMPICS|</a>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body ms-2">
+            <h1> </h1>
+            <p>
+              Kenny Harrison (born Kerry Harrison, February 13, 1965 in Milwaukee, Wisconsin, United States) is a former
+              track and field athlete competing in triple jump.
+
+              </br> <b> Athletic career</b></br>
+              High school
+              Harrison went to Brookfield Central for high school, where he competed in football, basketball and track.
+              He holds schools records in the long, high, and triple jump. His triple jump of 52 feet 4.5 inches at the
+              1983 Golden West Invitational ranked him #2 triple jump prep in the nation, and currently stands as the
+              Wisconsin high school #1 all-time triple jump by over 2 feet.[5] That mark also ranks on the top 10 list
+              for the Golden West Invitational. He also had a personal best in the long jump of 23 feet 4 inches, which
+              ranks among the top 35 in Wisconsin high school track & field history[7] and a high jump of 6 feet 7
+              inches. He held the Wisconsin state meet triple jump record of 48' 6.25" for 22 years, from 1983 to 2005.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-dark" data-bs-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ====== modal box End===== -->
+
+    <!-- ======modal box start===== -->
+    <div class="modal fade modal-lg" data-bs-backdrop="static" id="charles">
+      <div class="modal-dialog  modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <a class="navbar-brand ms-5 text-sm-break" href="#" id="logo">
+              <img src="./Images/WhatsApp_Image_2023-10-19_at_20.56.01_63c60977-removebg-preview.png" width="70px"
+                height="70px" alt="logo" id="logo-img" />
+              <span class="fw-bold text-dark"> |OLYMPICS|</a>
+
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body ms-2">
+            <h1>Charles Austin
+            </h1>
+            <p>
+              <b> Charles Allen Austin </b> (born December 19, 1967) is an American athlete who won the gold medal in
+              the men's high jump at the 1996 Summer Olympics in Atlanta. He was inducted into the United States Track &
+              Field Hall of Fame in 2012. Currently, Charles and Javier Sotomayor are the only two high jumpers that
+              have won gold medals in the Olympics, Outdoor World Championships, Indoor World Championships and World
+              Cup Championships. Hennadiy Avdyeyenko, who won the inaugural 1983 Outdoor World Championship setting the
+              championship high jump record with a jump of 2.32m (7' 7 1/4"), and Charles are the only two high jumpers
+              to win and establish the championship record in both the Outdoor World Championship and Olympic Games. He
+              currently holds or previously held the high jump record at the three biggest outdoor (Olympics, Outdoor
+              World Championship and Zurich, Weltklasse) track and field competitions.
+
+
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-dark" data-bs-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ====== modal box End===== -->
+
+    <!-- ======modal box start===== -->
+    <div class="modal fade modal-lg" data-bs-backdrop="static" id="yulimar">
+      <div class="modal-dialog  modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <a class="navbar-brand ms-5 text-sm-break" href="#" id="logo">
+              <img src="./Images/WhatsApp_Image_2023-10-19_at_20.56.01_63c60977-removebg-preview.png" width="70px"
+                height="70px" alt="logo" id="logo-img" />
+              <span class="fw-bold text-dark"> |OLYMPICS|</a>
+
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body ms-2">
+            <h1>Yulimar Rojas</h1>
+            <p>Yulimar Rojas Rodríguez ( born 21 October 1995) is a Venezuelan athlete who holds the world record for
+              women's triple jump, at 15.74 m (51 ft 7+1⁄2 in). She is the current Olympic champion, a four-time World
+              Champion (2017 London, 2019 Doha, 2022 Eugene and 2023 Budapest), and three-time World Indoor Champion
+              (2016 Portland, 2018 Birmingham and 2022 Belgrade); she is nicknamed la reina del triple salto – queen of
+              the triple jump.[1] Since 2014 she has held, and continued to beat, Venezuelan national records in triple
+              jump and long jump. She is a recipient of the Venezuelan Order of José Félix Ribas - First Class.</p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-dark" data-bs-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- last three cards -->
+  <!-- last three cards -->
+  <!-- last three cards -->
+  <!-- last three cards -->
+  <div class="container">
+    <div class="row">
+      <!-- Athlete 1 -->
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4 rounded">
+        <div class="card border-0" id="card">
+          <img src="./record imgs/wlodarczyk-01-20.jpg" class="card-img-top" width="100%" height="250px" alt="Athlete">
+          <div class="card-body">
+            <h5 class="card-title">Anita Włodarczyk
+            </h5>
+            <p><b> Anita Włodarczyk </b> ( born 8 August 1985) is a Polish hammer thrower. She is the 2012, 2016 and
+              2020 Olympic
+              champion, and the first woman in history to throw the hammer over 80 m </p>
+            <a href="#" class="btn btn-dark" data-bs-target="#anita" data-bs-toggle="modal">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Athlete 2 -->
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <div class="card border-0" id="card">
+          <img src="./record imgs/gettyimages-122723447-612x612.jpg" class="card-img-top" width="100%" height="250px"
+            alt="Athlete">
+          <div class="card-body">
+            <h5 class="card-title">
+              Virgilijus Alekna
+            </h5>
+            <p>
+              <b> Virgilijus Alekna</b> ( 13 February 1972) is a Lithuanian former discus thrower and politician. He won
+              medals at the 2000, 2004 and 2008 Olympics, including two golds.
+
+              After retiring from athletics, Alekna was elected to the national parliament, the Seimas, in 2016.
+            </p>
+            <a href="#" class="btn btn-dark" data-bs-target="#alkena" data-bs-toggle="modal">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Athlete 3 -->
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <div class="card border-0 card-end" id="card">
+          <img src="./record imgs/1234436957.avif" class="card-img-top" width="100%" height="250px" alt="Athlete">
+          <div class="card-body">
+            <h5 class="card-title">Damian warner
+            </h5>
+            <p>
+              <b> Damian David George Warner</b> (born November 4, 1989) is a Canadian track and field athlete
+              specializing in decathlon. He is the 2020 Olympic champion and a four-time World medallist (silver in 2015
+              and 2023, bronze in 2013 and 2019).
+
+            </p>
+            <a href="#" class="btn btn-dark" data-bs-target="#warner" data-bs-toggle="modal">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <!-- ======modal box start===== -->
+    <div class="modal fade modal-lg" data-bs-backdrop="static" id="anita" a>
+      <div class="modal-dialog  modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <a class="navbar-brand ms-5 text-sm-break" href="#" id="logo">
+              <img src="./Images/WhatsApp_Image_2023-10-19_at_20.56.01_63c60977-removebg-preview.png" width="70px"
+                height="70px" alt="logo" id="logo-img" />
+
+              <span class="fw-bold text-dark"> |OLYMPICS|</a>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body ms-2">
+            <h1>Anita Włodarczyk </h1>
+            <p>
+              Anita Włodarczyk (Polish pronunciation: [aˈɲita vwɔˈdart͡ʂɨk]; born 8 August 1985) is a Polish hammer
+              thrower. She is the 2012, 2016 and 2020 Olympic champion, and the first woman in history to throw the
+              hammer over 80 m; she currently holds the women's world record of 82.98 m. She is considered the greatest
+              women's hammer thrower of all time.[2][3]
+
+              She was voted the Polish Sports Personality of the Year in 2016 and received the Commander's Cross with
+              Star of the Order of Polonia Restituta in 2021 for her outstanding achievements in sport.
+              Włodarczyk won her first national U23 championships in 2007, and went on to compete in the 2007 European
+              Athletics U23 Championships, although she did not progress beyond the qualifying round. She finished sixth
+              in the hammer throw competition at the 2008 Olympic Games.
+
+              Włodarczyk qualified for the 2008 World Athletics Final and won a bronze medal. The following year, she
+              took part in the 2009 European Team Championships, winning her first gold medal at a major international
+              competition.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-dark" data-bs-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ====== modal box End===== -->
+
+    <!-- ======modal box start===== -->
+    <div class="modal fade modal-lg" data-bs-backdrop="static" id="alkena">
+      <div class="modal-dialog  modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <a class="navbar-brand ms-5 text-sm-break" href="#" id="logo">
+              <img src="./Images/WhatsApp_Image_2023-10-19_at_20.56.01_63c60977-removebg-preview.png" width="70px"
+                height="70px" alt="logo" id="logo-img" />
+              <span class="fw-bold text-dark"> |OLYMPICS|</a>
+
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body ms-2">
+            <h1>Virgilijus Alekna
+            </h1>
+            <p>
+              Virgilijus Alekna (Lithuanian pronunciation: [vʲɪrʲˈɡʲɪlʲɪjʊs ɐlʲɛkˈnɐ]; 13 February 1972) is a Lithuanian
+              former discus thrower and politician. He won medals at the 2000, 2004 and 2008 Olympics, including two
+              golds.
+
+              After retiring from athletics, Alekna was elected to the national parliament, the Seimas, in 2016.
+
+              He has 3 children - Martynas Alekna, Mykolas Alekna and Gabrielė Aleknaite.
+              </br> <b> Athletics career</b> </br>
+              Alekna has won two gold medals in the Summer Olympics in the discus throw, the first was in 2000 and the
+              second in 2004. He also won the bronze medal at the 2008 Beijing Summer Olympics. In 2007, he was
+              appointed as UNESCO Champion for Sport.
+              His personal record as well as the Lithuanian record is 73.88 m (242 ft 4+1⁄2 in), surpassed only by the
+              world record (74.08 metres).
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-dark" data-bs-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ====== modal box End===== -->
+
+    <!-- ======modal box start===== -->
+    <div class="modal fade modal-lg" data-bs-backdrop="static" id="warner">
+      <div class="modal-dialog  modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <a class="navbar-brand ms-5 text-sm-break" href="#" id="logo">
+              <img src="./Images/WhatsApp_Image_2023-10-19_at_20.56.01_63c60977-removebg-preview.png" width="70px"
+                height="70px" alt="logo" id="logo-img" />
+              <span class="fw-bold text-dark"> |OLYMPICS|</a>
+
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body ms-2">
+            <h1>Damian warner</h1>
+            <p>
+              Damian David George Warner (born November 4, 1989) is a Canadian track and field athlete specializing in
+              decathlon. He is the 2020 Olympic champion and a four-time World medallist (silver in 2015 and 2023,
+              bronze in 2013 and 2019). Warner also won the bronze medal at the 2016 Summer Olympics and was the 2014
+              Commonwealth champion and the two-time and reigning Pan American champion from the 2015 and 2019 Games.
+              Warner holds the Pan Am Games record and the Canadian record for the decathlon and the fourth-highest
+              decathlon score in history. Warner also holds the Olympic Games Record for the Decathlon at 9018 points.
+              Competing in the heptathlon, he is the 2022 World Indoor champion
+            </p>
+
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-dark" data-bs-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+
+
+  <div class="mt-5" style="background-color: rgb(17, 16, 16);">
+    <footer class=" container py-5">
+      <div class="row d-flex justify-content-center">
+        <div class="col-2 text-light ms-0 me-auto">
+          <h5>Olympic Games</h5>
+          <ul class="nav flex-column text-center text-sm-center text-md-start text-lg-start">
+            <li class="nav-item mb-2"><a href="www.parisolympics.com" class="nav-link p-0 text-light">Paris 2024</a>
+            </li>
+            <li class="nav-item mb-2"><a href="www.result.com" class="nav-link p-0 text-light">Results & Medals</a></li>
+            <li class="nav-item mb-2"><a href="www.replays.com" class="nav-link p-0 text-light">Replays & Highlights</a>
+            </li>
+            <li class="nav-item mb-2"><a href="www.olympicgames.com" class="nav-link p-0 text-light">All Olympic
+                Games</a></li>
+          </ul>
+        </div>
+
+        <div class="col-2 text-light d-none d-sm-none d-md-block d-lg-block ms-0 me-auto">
+          <h5>Olympic Channel</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="https://www.tvchannels.com" class="nav-link p-0 text-light">TV
+                Channel</a></li>
+            <li class="nav-item mb-2"><a href="www.liveevents.com" class="nav-link p-0 text-light">Live Events</a></li>
+            <li class="nav-item mb-2"><a href="www.orignal.com" class="nav-link p-0 text-light">Original Series</a></li>
+            <li class="nav-item mb-2"><a href="www.corporate.com" class="nav-link p-0 text-light">Corporate</a></li>
+          </ul>
+        </div>
+
+        <div class="col-2 text-light d-none d-sm-none d-md-block d-lg-block">
+          <h5>Social Networks</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="www.facebook.com" class="nav-link p-0 text-light">Facebook</a></li>
+            <li class="nav-item mb-2"><a href="www.twitter.com" class="nav-link p-0 text-light">Twitter</a></li>
+            <li class="nav-item mb-2"><a href="wwww.instagram.com" class="nav-link p-0 text-light">Instagram</a></li>
+            <li class="nav-item mb-2"><a href="wwww.youtube.com" class="nav-link p-0 text-light">Youtube</a></li>
+            <li class="nav-item mb-2"><a href="www.snapchat.com" class="nav-link p-0 text-light">Snapchat</a></li>
+          </ul>
+        </div>
+        <div class="col-4 d-none d-sm-none d-md-block d-lg-block">
+          <img src="./Images/Olympics__8_-removebg-preview.png" alt="" style="height: 270px;">
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-between py-4 my-4 border-top text-light">
+        <p>© 2023 Olympics, Inc. All rights reserved.</p>
+        <ul class="list-unstyled d-flex">
+          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                <use xlink:href="#twitter"></use>
+              </svg></a></li>
+          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                <use xlink:href="#instagram"></use>
+              </svg></a></li>
+          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                <use xlink:href="#facebook"></use>
+              </svg></a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed('#element1', {
+      strings: ['Olympics', 'Paris 2024', 'Paralympia'],
+      typeSpeed: 50,
+      loop: true,
+    });
+    var typed = new Typed('#element2', {
+      strings: ['Olympics', 'Paris 2024', 'Paralympia'],
+      typeSpeed: 50,
+      loop: true,
+    });
+    var typed = new Typed('#element3', {
+      strings: ['Olympics', 'Paris 2024', 'Paralympia'],
+      typeSpeed: 50,
+      loop: true,
+    });
+  </script>
+</body>
+
+</html>

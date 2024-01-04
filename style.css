@@ -1,0 +1,75 @@
+*{margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+.heading{
+    display: flex;
+justify-content: center;
+}
+ .heading{
+      font-family: 'Anton', sans-serif;
+font-family: 'Lato', sans-serif;
+    }
+
+    .card{
+     transition: all 1s ease 0s;
+    }
+
+    .card:hover{
+     transform: scale(0.8);
+    }
+    .container{
+      
+      justify-content: center;
+      align-content: center;
+    }
+    #logo{
+      z-index: 1;
+    }
+    .blink {
+      animation: blinker 1.5s linear infinite;
+      color: red;
+      font-family: sans-serif;
+  }
+  @keyframes blinker {
+      50% {
+          opacity: 0;
+      }
+  }
+  .home::before{
+    content: "";
+    background: url("../img/foodbg.jpg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 650px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+    background-repeat: no-repeat;
+    background-size: cover  ;
+}
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  height: 4px;
+  background-color: #8b0000;
+  transform-origin: bottom;
+  transition: transform 0.3s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom;
+}
+.olympians{
+  margin-top: 100px;
+}

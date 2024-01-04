@@ -1,0 +1,34 @@
+.athletes {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+.modal-content{
+    background: linear-gradient(90deg, rgb(78, 72, 72) 0%, rgb(55, 156, 177) 100%)
+}
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    height: 4px;
+    background-color: #8b0000;
+    transform-origin: bottom;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom;
+  }
+  .text span{
+    position: relative;
+    display: inline-block;
+}

@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="./main.css">
+  <!-- Google fonts link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <!-- Anime css cdn -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <title>Olympics</title>
+  <style>
+    .heading {
+      font-family: 'Anton', sans-serif;
+      font-family: 'Lato', sans-serif;
+    }
+
+    .card {
+      transition: all 0.5s ease 0s;
+    }
+
+    .card:hover {
+      transform: scale(0.9);
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <!-- Navbar start -->
+
+
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="height: 18vh;">
+    <div class="container-fluid">
+      <a class="navbar-brand mt-2 ms-4" href="./index.html"><img style="height: 100px;"
+          src="./Images/WhatsApp_Image_2023-10-19_at_20.56.01_63c60977-removebg-preview.png" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="text-light"><i class="fa-solid fa-bars"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item px-4">
+            <a class="nav-link active fs-4 fw-bold text-dark heading hover-underline-animation" aria-current="page"
+              href="#games">GAMES</a>
+          </li>
+          <li class="nav-item px-4">
+            <a class="nav-link active fs-4 text-dark fw-bold heading hover-underline-animation"
+              href="./athletes.html">ATHLETES</a>
+          </li>
+          <li class="nav-item px-4">
+            <a class="nav-link active fs-4 text-dark fw-bold heading hover-underline-animation"
+              href="./news.html">NEWS</a>
+          </li>
+          <li class="nav-item px-4">
+            <a class="nav-link active fs-4 fw-bold text-dark heading hover-underline-animation"
+              href="./records.html">RECORDS</a>
+          </li>
+        </ul>
+        <button class="btn btn-outline-dark me-2 rounded-pill" data-bs-toggle="modal" data-bs-target="#exampleModal">Log
+          In</button>
+        <button class="btn btn-outline-dark me-4 rounded-pill" data-bs-toggle="modal"
+          data-bs-target="#exampleModal1">Sign Up</button>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- login modal -->
+
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <img src="./Images/WhatsApp_Image_2023-10-19_at_20.56.01_63c60977-removebg-preview.png" alt=""
+            style="width: 60px;">
+          <h5 class="modal-title heading text-light" id="exampleModalLabel">Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-light">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label heading"><i class="fas fa-user"></i>Email
+                address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required
+                placeholder="Email">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label heading"><i class="fas fa-key"></i>Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" required placeholder="Password">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary heading rounded-pill" data-bs-dismiss="modal">Forgot
+                Password</button>
+              <button type="submit" class="btn btn-primary heading rounded-pill">LogIn</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Signup modal -->
+
+
+  <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content text-light">
+        <div class="modal-header">
+          <h5 class="modal-title heading" id="exampleModalLabel">SignUp</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label heading">Name</label>
+              <input type="text" class="form-control" id="exampleInputPassword1" required placeholder="Name">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label heading">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required
+                placeholder="Email">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label heading">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" required placeholder="Password">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label heading">Confirm Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" required
+                placeholder="Confirm Password">
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary heading rounded-pill">Sign Up</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Home Section start -->
+
+
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button style="border-radius: 100%; height: 20px; width: 20px;" type="button"
+        data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true"
+        aria-label="Slide 1"></button>
+      <button style="border-radius: 100%; height: 20px; width: 20px;" type="button"
+        data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button style="border-radius: 100%; height: 20px; width: 20px;" type="button"
+        data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./Images/olympic-rings-1.jpeg" class="d-block w-100" alt="..." style="height: 100vh;">
+        <div class="carousel-caption d-none d-md-block">
+          <h1 class="heading fw-bold"><span id="element1"></span></h1>
+          <p class="heading fs-3">Let's open the emotions of sport</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./Images/645d02a69da9f5.35506654.webp" class="d-block w-100" alt="..." style="height: 100vh;">
+        <div class="carousel-caption d-none d-md-block">
+          <h1 class="heading fw-bold"><span id="element2"></span></h1>
+          <p class="heading fs-3">Ouvrons grand les jeux</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./Images/bryan-turner-mf9m6brhctg-unsplash_0.avif" class="d-block w-100" alt="..."
+          style="height: 100vh;">
+        <div class="carousel-caption d-none d-md-block">
+          <h1 class="heading fw-bold"><span id="element3"></span></h1>
+          <p class="heading fs-3">Citius, Altius, Fortius - Communiter</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <!-- Games section-->
+
+  <h1 id="games" style="color : black" class="heading ms-3 mt-5 fw-bold text-center">Games</h1>
+  <div class="row row-cols-1 row-cols-md-2 g-4 ms-auto me-auto" style="width: 85vw;">
+    <div class="col">
+      <div class="card border-0">
+        <img src="./Images/11902-athletes-wallpaper.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title fs-2 fw-bold heading" style="margin-left: -10px;">Athletics (Track and Field)</h5>
+          <p class="card-text fs-5 heading" style="margin-left: -5px;"><strong>Athletics</strong> is a sport that
+            includes a
+            number of events involving running, jumping, throwing or walking. Often referred to as <strong>track &
+              field</strong>, the sport includes single events, such as the 100m, marathon or long jump, combined
+            events, including the decathlon and heptathlon, or team-based events such as the 4x100m relays.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card border-0">
+        <img src="./Images/swimmer-competition-olympics-athlete.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title fs-2 fw-bold heading" style="margin-left: -10px;">Swimming</h5>
+          <p class="card-text fs-5 heading" style="margin-left: -5px;"><strong>Swimming at the Olympics is both an
+              individual
+              and team sport</strong> where competitors propel their bodies through water in either an outdoor or indoor
+            swimming pool using one of the following strokes: Freestyle, backstroke, breaststroke, or butterfly. It is
+            not to be confused with Marathon (open water) swimming.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card border-0">
+        <img src="./Images/image.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title fs-2 fw-bold heading" style="margin-left: -10px;">Basketball</h5>
+          <p class="card-text fs-5 heading" style="margin-left: -5px;"><strong>Basketball</strong> is a team sport
+            played on a
+            rectangular court where two opposing <strong>teams made up of five players</strong> attempt to score by
+            throwing a ball into the opponent's hoop and net, otherwise known as a basket.<br>Basketball was invented in
+            December 1891 by Canadian James W. Naismith, an instructor at the YMCA Training School in Massachusetts.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card border-0">
+        <img src="./Images/boxing.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title fs-2 fw-bold heading" style="margin-left: -10px;">Boxing</h5>
+          <p class="card-text fs-5 heading" style="margin-left: -5px;"><strong>Boxing is a form of hand-to-hand unarmed
+              combat</strong> where one athlete attempts to land punches on the head or body (above waist-height) of the
+            opponent to score points - as decided by judges - or render said opponent unable to continue. In 1867, the
+            Marquess of Queensberry rules were published which codified boxing for the first time and mandated the use
+            of boxing gloves.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card border-0">
+        <img src="./Images/fencing.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title fs-2 fw-bold heading" style="margin-left: -10px;">Fencing</h5>
+          <p class="card-text fs-5 heading" style="margin-left: -5px;"><strong>Fencing</strong> is a combat sport in
+            which two
+            athletes use swords to attack and defend against one another with the aim of striking their opponent in
+            order to score points. <strong>The three disciplines of modern fencing are the foil, the épée, and the
+              sabre</strong> (also called saber). Each discipline uses a different kind of blade (which shares the same
+            name) and has unique rules.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card border-0">
+        <img src="./Images/tennis.avif" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title fs-2 fw-bold heading" style="margin-left: -10px;">Tennis</h5>
+          <p class="card-text fs-5 heading" style="margin-left: -5px;"><strong>The modern game is played in singles (one
+              player
+              versus another), doubles (teams of two) and mixed doubles (mixed-gender teams)</strong> and features
+            differing scoring systems across international events. Tennis has a long history, but the birth of the game
+            played today is thought to have taken place in England. Tennis is a fast-paced sport that demands precision
+            and strategic thinking</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+
+
+  <div class="mt-5" style="background-color: #222222;">
+    <footer class=" container py-5">
+      <div class="row d-flex justify-content-center">
+        <div class="col-2 text-light ms-0 me-auto">
+          <h5>Olympic Games</h5>
+          <ul class="nav flex-column text-center text-sm-center text-md-start text-lg-start">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Paris 2024</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Results & Medals</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Replays & Highlights</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">All Olympic Games</a></li>
+          </ul>
+        </div>
+
+        <div class="col-2 text-light d-none d-sm-none d-md-block d-lg-block ms-0 me-auto">
+          <h5>Olympic Channel</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">TV Channel</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Live Events</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Original Series</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Corporate</a></li>
+          </ul>
+        </div>
+
+        <div class="col-2 text-light d-none d-sm-none d-md-block d-lg-block">
+          <h5>Social Networks</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Facebook</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Twitter</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Instagram</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Youtube</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Snapchat</a></li>
+          </ul>
+        </div>
+        <div class="col-4 d-none d-sm-none d-md-block d-lg-block">
+          <img src="./Images/WhatsApp_Image_2023-10-19_at_20.56.01_63c60977-removebg-preview.png" alt=""
+            style="height: 270px;">
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-between py-4 my-4 border-top text-light">
+        <p>© 2023 Olympics, Inc. All rights reserved.</p>
+        <ul class="list-unstyled d-flex">
+          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                <use xlink:href="#twitter"></use>
+              </svg></a></li>
+          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                <use xlink:href="#instagram"></use>
+              </svg></a></li>
+          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                <use xlink:href="#facebook"></use>
+              </svg></a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed('#element1', {
+      strings: ['Olympics', 'Paris 2024', 'Paralympia'],
+      typeSpeed: 50,
+      loop: true,
+    });
+    var typed = new Typed('#element2', {
+      strings: ['Olympics', 'Paris 2024', 'Paralympia'],
+      typeSpeed: 50,
+      loop: true,
+    });
+    var typed = new Typed('#element3', {
+      strings: ['Olympics', 'Paris 2024', 'Paralympia'],
+      typeSpeed: 50,
+      loop: true,
+    });
+  </script>
+  <!-- Anime cdn -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+
+</html>

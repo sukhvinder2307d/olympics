@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="./main.css">
+  <!-- Google fonts link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <!-- aos css cdn -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <title>News</title>
+
+
+  <style>
+    .heading {
+      font-family: 'Anton', sans-serif;
+      font-family: 'Lato', sans-serif;
+    }
+
+    .card {
+      transition: all 0.5s ease 0s;
+    }
+
+    .card:hover {
+      transform: scale(0.95);
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+  </style>
+
+</head>
+
+<body>
+
+
+  <!-- Navbar start -->
+
+
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="height: 18vh;">
+    <div class="container-fluid">
+      <a class="navbar-brand mt-2 ms-4" href="./index.html"><img style="height: 100px;"
+          src="./Images/WhatsApp_Image_2023-10-19_at_20.56.01_63c60977-removebg-preview.png" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="text-light"><i class="fa-solid fa-bars"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item px-4">
+            <a class="nav-link active fs-4 fw-bold text-dark heading hover-underline-animation" aria-current="page"
+              href="./index.html">GAMES</a>
+          </li>
+          <li class="nav-item px-4">
+            <a class="nav-link active fs-4 text-dark fw-bold heading hover-underline-animation"
+              href="./athletes.html">ATHLETES</a>
+          </li>
+          <li class="nav-item px-4">
+            <a class="nav-link active fs-4 text-dark fw-bold heading hover-underline-animation"
+              href="./news.html">NEWS</a>
+          </li>
+          <li class="nav-item px-4">
+            <a class="nav-link active fs-4 fw-bold text-dark heading hover-underline-animation"
+              href="./records.html">RECORDS</a>
+          </li>
+        </ul>
+        <button class="btn btn-outline-dark me-2 rounded-pill" data-bs-toggle="modal" data-bs-target="#exampleModal">Log
+          In</button>
+        <button class="btn btn-outline-dark me-4 rounded-pill" data-bs-toggle="modal"
+          data-bs-target="#exampleModal1">Sign Up</button>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- login modal -->
+
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <img src="./Images/WhatsApp_Image_2023-10-19_at_20.56.01_63c60977-removebg-preview.png" alt=""
+            style="width: 60px;">
+          <h5 class="modal-title heading text-light" id="exampleModalLabel">Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-light">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label heading"><i class="fas fa-user"></i>Email
+                address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label heading"><i class="fas fa-key"></i>Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" required>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary heading rounded-pill" data-bs-dismiss="modal">Forgot
+                Password</button>
+              <button type="submit" class="btn btn-primary heading rounded-pill">LogIn</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Signup modal -->
+
+
+  <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content text-light">
+        <div class="modal-header">
+          <h5 class="modal-title heading" id="exampleModalLabel">SignUp</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label heading">Name</label>
+              <input type="text" class="form-control" id="exampleInputPassword1" required placeholder="Name">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label heading">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required
+                placeholder="Email">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label heading">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" required placeholder="Password">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label heading">Confirm Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" required
+                placeholder="Confirm Password">
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary heading rounded-pill">Sign Up</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- news page start -->
+
+
+  <h1 class="athletes heading"><strong>NEWS</strong></h1>
+
+  <div class="container mt-5 heading">
+    <div class="card border-0" data-aos="fade-right">
+      <div class="row">
+        <div class="col-md-5">
+          <img src="./news images/5.webp" alt="" class="img-fluid" style="height: 270px;">
+        </div>
+        <div class="col-md-7">
+          <h2 class="card-title mt-3">Pan Am Games: Nine breakout stars to watch at Paris 2024</h2>
+          <p class="fs-4">From the pool to the court to skateboard park, don't miss these standout athletes from
+            Santiago 2023 on the road to next summer's Olympic Games</p>
+          <button class="btn btn-outline-dark" style="border-radius: 0;">Read More</button>
+        </div>
+      </div>
+    </div>
+    <div class="card mt-4 border-0" data-aos="fade-left">
+      <div class="row">
+        <div class="col-md-7">
+          <h2 class="card-title mt-3 ms-4">Korea Masters 2023 badminton: India's challenge ends in first round with
+            Tanya Hemanth's loss</h2>
+          <p class="ms-4 fs-4">The Indian badminton player lost to South Korea's Ga Ram Kim in straight games.</p>
+          <button class="btn btn-outline-dark ms-4" style="border-radius: 0;">Read More</button>
+        </div>
+        <div class="col-md-5">
+          <img src="./news images/shuttle.webp" class="img-fluid" style="height: 270px;">
+        </div>
+      </div>
+    </div>
+    <div class="card mt-4 border-0" data-aos="fade-right">
+      <div class="row">
+        <div class="col-md-5">
+          <img src="./news images/football.webp" alt="" class="img-fluid" style="height: 270px;">
+        </div>
+        <div class="col-md-7">
+          <h2 class="card-title mt-3">AFC Cup 2023-24: Mohun Bagan lose 1-2 to Bashundhara Kings</h2>
+          <p class="fs-4">The Indian football club took the lead through Liston Colaco in the Group D match in Dhaka but
+            squandered the advantage. Mohun Bagan will play Odisha FC next.</p>
+          <button class="btn btn-outline-dark" style="border-radius: 0;">Read More</button>
+        </div>
+      </div>
+    </div>
+    <div class="card mt-4 border-0" data-aos="fade-left">
+      <div class="row">
+        <div class="col-md-7">
+          <h2 class="card-title mt-3 ms-4">Who are the ones to beat in women's tennis in 2024? Swiatek</h2>
+          <p class="ms-4 fs-4">With the completion of WTA Finals in Cancun, the WTA season has wrapped, but play in 2024
+            is less than 2 months away, so we look at the aiming to carry.</p>
+          <button class="btn btn-outline-dark ms-4" style="border-radius: 0;">Read More</button>
+        </div>
+        <div class="col-md-5">
+          <img src="./news images/winner.webp" class="img-fluid" style="height: 270px;">
+        </div>
+      </div>
+    </div>
+    <div class="card mt-4 border-0" data-aos="fade-right">
+      <div class="row">
+        <div class="col-md-5">
+          <img src="./news images/jordan.webp" alt="" class="img-fluid" style="height: 270px;">
+        </div>
+        <div class="col-md-7">
+          <h2 class="card-title mt-3">Exclusive - Jordan Burroughs on embracing defeats</h2>
+          <p class="fs-4">Missing out on the 2023 Wrestling World Championships was a painful setback for the Olympic
+            and six-time world champion, but rather than dwell on it.</p>
+          <button class="btn btn-outline-dark" style="border-radius: 0;">Read More</button>
+        </div>
+      </div>
+    </div>
+    <div class="card mt-4 border-0" data-aos="fade-left">
+      <div class="row">
+        <div class="col-md-7">
+          <h2 class="card-title mt-3 ms-4">Bryony Page reflects on lessons learned from first Trampoline Championships
+          </h2>
+          <p class="ms-4 fs-4">The history-making trampolinist is eyeing success at her home World Championships not
+            only to increase her medal tally but also qualify a berth for GB at Paris 2024.</p>
+          <button class="btn btn-outline-dark ms-4" style="border-radius: 0;">Read More</button>
+        </div>
+        <div class="col-md-5">
+          <img src="./news images/yssjq7cfjbhct9qlnbi9.webp" class="img-fluid" style="height: 270px;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Footer -->
+
+  <div class="mt-5" style="background-color: #222222;">
+    <footer class=" container py-5">
+      <div class="row d-flex justify-content-center">
+        <div class="col-2 text-light ms-0 me-auto">
+          <h5>Olympic Games</h5>
+          <ul class="nav flex-column text-center text-sm-center text-md-start text-lg-start">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Paris 2024</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Results & Medals</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Replays & Highlights</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">All Olympic Games</a></li>
+          </ul>
+        </div>
+
+        <div class="col-2 text-light d-none d-sm-none d-md-block d-lg-block ms-0 me-auto">
+          <h5>Olympic Channel</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">TV Channel</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Live Events</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Original Series</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Corporate</a></li>
+          </ul>
+        </div>
+
+        <div class="col-2 text-light d-none d-sm-none d-md-block d-lg-block">
+          <h5>Social Networks</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Facebook</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Twitter</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Instagram</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Youtube</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Snapchat</a></li>
+          </ul>
+        </div>
+        <div class="col-4 d-none d-sm-none d-md-block d-lg-block">
+          <img src="./Images/WhatsApp_Image_2023-10-19_at_20.56.01_63c60977-removebg-preview.png" alt=""
+            style="height: 270px;">
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-between py-4 my-4 border-top text-light">
+        <p>© 2023 Olympics, Inc. All rights reserved.</p>
+        <ul class="list-unstyled d-flex">
+          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                <use xlink:href="#twitter"></use>
+              </svg></a></li>
+          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                <use xlink:href="#instagram"></use>
+              </svg></a></li>
+          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                <use xlink:href="#facebook"></use>
+              </svg></a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <!-- aos js cdn -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      offset: 120,
+    });
+  </script>
+</body>
+
+</html>
